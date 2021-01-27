@@ -1,0 +1,14 @@
+[Unit]
+Description=RTC time for Plasma Med
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/plasma-rtc
+ExecStart=/usr/bin/python -u plasma-rtc.py
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
